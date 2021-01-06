@@ -3,7 +3,7 @@ const pug = require('gulp-pug')
 const notify = require('gulp-notify')
 const fs = require('fs')
 
-module.exports = function() {
+module.exports = () => {
    task('pugTask', () => {
       return src(path.pug.src)
          .pipe(pug({
