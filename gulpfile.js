@@ -1,8 +1,13 @@
 const {series} = require('gulp')
 const tasks = require('./gulp//paths/tasks.js')
 
+// Подключение путей
+require('./gulp/paths/paths.js')
+
 // Подключение тасков
-tasks.forEach( task => require(task)() )
+tasks.map( task => require(task)() )
 
 // Таск по умолчанию
-exports.default = series('test')
+exports.default = series(
+   'test'
+)
