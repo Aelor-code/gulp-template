@@ -1,3 +1,3 @@
 module.exports = [
-   './gulp/tasks/test'
+   './gulp/tasks/pug'
 ]

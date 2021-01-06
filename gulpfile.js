@@ -9,5 +9,5 @@ tasks.map( task => require(task)() )
 
 // Таск по умолчанию
 exports.default = series(
-   'test'
+   'pugTask'
 )
