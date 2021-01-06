@@ -1,9 +1,8 @@
-const {src, dest, task, series} = require('gulp')
+const {series} = require('gulp')
+const tasks = require('./gulp//paths/tasks.js')
 
+// Подключение тасков
+tasks.forEach( task => require(task)() )
 
-task('test', (cb) => {
-    console.log('test')
-    cb()
-})
-
+// Таск по умолчанию
 exports.default = series('test')
