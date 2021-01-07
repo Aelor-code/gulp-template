@@ -9,7 +9,10 @@ tasks.map( task => require(task)() )
 
 // Таск по умолчанию
 exports.default = series(
-   'jsonTask', 'pugTask',
+   'jsonTask',
+   parallel(
+      'pugTask', 'stylesTask'
+   ),
    parallel(
       'watchTask', 'serverTask'
    )
