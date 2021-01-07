@@ -18,7 +18,7 @@ global.path = {
       watch: `${srcFolder}/blocks/**/*.json`
    },
    styles: {
-      fileType: '.sass',
+      fileName: 'main',
       src: `${srcFolder}/templates/styles/#main.sass`,
       dest: `${destFolder}/css/`,
       watch: [
