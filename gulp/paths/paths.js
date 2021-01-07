@@ -7,7 +7,8 @@ global.path = {
       dest: `${destFolder}/`,
       watch: [
          `${srcFolder}/pages/*.pug`,
-         `${srcFolder}/blocks/**/*.pug`
+         `${srcFolder}/blocks/**/*.pug`,
+         `${srcFolder}/templates/pug/*.pug`
       ]
    },
    json: {
