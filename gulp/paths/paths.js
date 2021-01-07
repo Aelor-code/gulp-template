@@ -4,7 +4,11 @@ global.destFolder = './build'
 global.path = {
    pug: {
       src: `${srcFolder}/pages/*.pug`,
-      dest: `${destFolder}/`
+      dest: `${destFolder}/`,
+      watch: [
+            `${srcFolder}/pages/*.pug`,
+            `${srcFolder}/blocks/**/*.pug`
+            ]
    },
    json: {
       name: 'main.json',

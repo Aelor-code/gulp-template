@@ -19,5 +19,6 @@ module.exports = () => {
             }
          }))
          .pipe(dest(path.pug.dest))
+         .pipe(server.stream())
    })
 }
