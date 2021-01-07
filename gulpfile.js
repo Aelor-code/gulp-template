@@ -1,4 +1,4 @@
-const {series} = require('gulp')
+const {series, parallel} = require('gulp')
 const tasks = require('./gulp//paths/tasks.js')
 
 // Подключение путей
@@ -9,5 +9,8 @@ tasks.map( task => require(task)() )
 
 // Таск по умолчанию
 exports.default = series(
-   'jsonTask', 'pugTask', 'serverTask'
+   'jsonTask', 'pugTask',
+   parallel(
+      'watchTask', 'serverTask'
+   )
 )
