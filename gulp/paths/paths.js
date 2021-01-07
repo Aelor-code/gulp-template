@@ -13,6 +13,7 @@ global.path = {
    json: {
       name: 'main.json',
       src: `${srcFolder}/blocks/**/*.json`,
-      dest: `${srcFolder}/templates/json/`
+      dest: `${srcFolder}/templates/json/`,
+      watch: `${srcFolder}/blocks/**/*.json`
    }
 }

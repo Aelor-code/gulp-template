@@ -8,5 +8,6 @@ module.exports = () => {
             fileName: path.json.name
          }))
          .pipe(dest(path.json.dest))
+         .pipe(server.stream())
    })
 }
