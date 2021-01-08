@@ -6,5 +6,7 @@ module.exports = () => {
       watch(path.json.watch, series('jsonTask', 'pugTask'))
       watch(path.styles.watch, series('stylesTask'))
       watch(path.scripts.watch, series('scriptsTask'))
+      watch(path.plugins.styles.watch, series('pluginsStylesTask'))
+      watch(path.plugins.scripts.watch, series('pluginsScriptsTask'))
    })
 }

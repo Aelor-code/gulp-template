@@ -31,5 +31,19 @@ global.path = {
       src: `${srcFolder}/blocks/**/*.js`,
       dest: `${destFolder}/js/`,
       watch: `${srcFolder}/blocks/**/*.js`
+   },
+   plugins: {
+      styles: {
+         fileName: 'libs.css',
+         src: `${srcFolder}/plugins/**/*.css`,
+         dest: `${destFolder}/css/`,
+         watch: `${srcFolder}/plugins/**/*.css`
+      },
+      scripts: {
+         fileName: 'libs.js',
+         src: `${srcFolder}/plugins/**/*.js`,
+         dest: `${destFolder}/js/`,
+         watch: `${srcFolder}/plugins/**/*.js`
+      }
    }
 }
