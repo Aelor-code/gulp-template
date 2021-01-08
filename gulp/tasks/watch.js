@@ -9,5 +9,6 @@ module.exports = () => {
       watch(path.plugins.styles.watch, series('pluginsStylesTask'))
       watch(path.plugins.scripts.watch, series('pluginsScriptsTask'))
       watch(path.fonts.watch, series('fontsTask', 'fontsStyleTask'))
+      watch(path.images.watch, series('imagesTask'))
    })
 }

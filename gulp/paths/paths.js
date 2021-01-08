@@ -54,5 +54,10 @@ global.path = {
          fileStyle: `${srcFolder}/templates/styles/fonts.sass`,
          files: `${srcFolder}/fonts/`
       }
+   },
+   images: {
+      src: `${srcFolder}/images/*.{jpg,jpeg,png,ico,gif,svg,webp}`,
+      dest: `${destFolder}/images/`,
+      watch: `${srcFolder}/images/*.{jpg,jpeg,png,ico,gif,svg,webp}`
    }
 }
