@@ -45,5 +45,10 @@ global.path = {
          dest: `${destFolder}/js/`,
          watch: `${srcFolder}/plugins/**/*.js`
       }
+   },
+   fonts: {
+      src: `${srcFolder}/fonts/*.{woff,woff}`,
+      dest: `${destFolder}/fonts/`,
+      watch: `${srcFolder}/fonts/*.{woff,woff2}`
    }
 }

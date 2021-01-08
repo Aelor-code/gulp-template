@@ -14,7 +14,7 @@ exports.default = series(
       'jsonTask', 'pluginsStylesTask', 'pluginsScriptsTask'
    ),
    parallel(
-      'pugTask', 'stylesTask', 'scriptsTask'
+      'pugTask', 'stylesTask', 'scriptsTask', 'fontsTask'
    ),
    parallel(
       'watchTask', 'serverTask'
