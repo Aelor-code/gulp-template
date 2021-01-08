@@ -47,8 +47,12 @@ global.path = {
       }
    },
    fonts: {
-      src: `${srcFolder}/fonts/*.{woff,woff}`,
+      src: `${srcFolder}/fonts/*.{woff,woff2}`,
       dest: `${destFolder}/fonts/`,
-      watch: `${srcFolder}/fonts/*.{woff,woff2}`
+      watch: `${srcFolder}/fonts/*.{woff,woff2}`,
+      styles: {
+         fileStyle: `${srcFolder}/templates/styles/fonts.sass`,
+         files: `${srcFolder}/fonts/`
+      }
    }
 }

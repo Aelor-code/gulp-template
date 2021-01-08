@@ -11,10 +11,10 @@ tasks.map( task => require(task)() )
 exports.default = series(
    'cleanTask',
    parallel(
-      'jsonTask', 'pluginsStylesTask', 'pluginsScriptsTask'
+      'jsonTask', 'fontsTask', 'pluginsStylesTask', 'pluginsScriptsTask'
    ),
    parallel(
-      'pugTask', 'stylesTask', 'scriptsTask', 'fontsTask'
+      'pugTask', 'stylesTask', 'scriptsTask', 'fontsStyleTask'
    ),
    parallel(
       'watchTask', 'serverTask'
