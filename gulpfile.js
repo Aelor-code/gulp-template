@@ -11,7 +11,7 @@ tasks.map( task => require(task)() )
 exports.default = series(
    'jsonTask',
    parallel(
-      'pugTask', 'stylesTask'
+      'pugTask', 'stylesTask', 'scriptsTask'
    ),
    parallel(
       'watchTask', 'serverTask'

@@ -25,5 +25,11 @@ global.path = {
          `${srcFolder}/blocks/**/*.sass`,
          `${srcFolder}/templates/styles/**/*.sass`
       ]
+   },
+   scripts: {
+      fileName: 'main.js',
+      src: `${srcFolder}/blocks/**/*.js`,
+      dest: `${destFolder}/js/`,
+      watch: `${srcFolder}/blocks/**/*.js`
    }
 }
