@@ -45,6 +45,7 @@ if (blockName) {
                }
                console.log(`${blockName}.${extension} - создан`)
 
+               // Обновления файла с импортами
                if (fileImport) {
                   fs.appendFile(fileImportPath, fileImportString, err => {
                      if (err) {
