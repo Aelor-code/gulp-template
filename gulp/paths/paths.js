@@ -59,5 +59,16 @@ global.path = {
       src: `${srcFolder}/images/*.{jpg,jpeg,png,ico,gif,svg,webp}`,
       dest: `${destFolder}/images/`,
       watch: `${srcFolder}/images/*.{jpg,jpeg,png,ico,gif,svg,webp}`
+   },
+   iconFonts: {
+      dir: `${srcFolder}/images/iconFonts/`,
+      src: `${srcFolder}/images/iconFonts/*.svg`,
+      dest: `${srcFolder}/fonts/`,
+      watch: `${srcFolder}/fonts/icons/*.svg`,
+      runTimestamp: Math.round(Date.now() / 1000),
+      targetPath: `../templates/styles/_iconFont.sass`,
+      fontPath: `${srcFolder}/fonts/`,
+      pathTemplate: `${srcFolder}/templates/styles/_templateIconFont.sass`,
+      fontName: "iconFont"
    }
 }

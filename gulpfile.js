@@ -9,7 +9,7 @@ tasks.map( task => require(task)() )
 
 // Таск по умолчанию
 exports.default = series(
-   'cleanTask',
+   'cleanTask', 'iconFontsTask',
    parallel(
       'jsonTask', 'fontsTask', 'pluginsStylesTask', 'pluginsScriptsTask'
    ),
