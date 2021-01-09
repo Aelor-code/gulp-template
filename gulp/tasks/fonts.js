@@ -16,7 +16,7 @@ module.exports = () => {
             files.map(file => {
                let fileName = file.split('.')[0]
                let fileArray = fileName.split('_')
-               let fontName = fileArray[0] || ''
+               let fontName = fileArray[0] || fileName
                let fontWeight = fileArray[1] || '400'
                let fontStyle = fileArray[2] || 'normal'
 
