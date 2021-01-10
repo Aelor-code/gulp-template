@@ -10,6 +10,8 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-iconfont": "^10.0.3",
+    "gulp-iconfont-css": "^3.0.0",
     "gulp-merge-json": "^2.1.1",
     "gulp-notify": "^3.2.0",
     "gulp-pug": "^4.0.1",
