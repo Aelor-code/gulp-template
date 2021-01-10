@@ -21,7 +21,7 @@ if (blockName) {
          
          switch (extension) {
             case 'pug':
-               fileContent = `mixin ${blockName}()\n  .${blockName}&attributes(attributes)`
+               fileContent = `mixin ${blockName}()\n   .${blockName}&attributes(attributes)`
                fileImport = 'blocks.pug'
                fileImportPath = `#src/templates/pug/${fileImport}`
                fileImportString = `include ../../blocks/${blockName}/${blockName}\n`
