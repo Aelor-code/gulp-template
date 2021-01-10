@@ -4,7 +4,7 @@ const blockName = process.argv[2] // имя блока
 const extensions = uniqueArray(
    process.argv.slice(3).length 
    ? process.argv.slice(3) 
-   : ['pug','json','sass','js']
+   : ['pug','json','styl','js']
    ) // расширения
 
 if (blockName) {
@@ -29,11 +29,11 @@ if (blockName) {
             case 'json':
                fileContent = '{}'
             break
-            case 'sass':
-               fileContent = `.${blockName}`
-               fileImport = '#main.sass'
+            case 'styl':
+               fileContent = ``
+               fileImport = '#main.styl'
                fileImportPath = `#src/templates/styles/${fileImport}`
-               fileImportString = `@import ../../blocks/${blockName}/${blockName}\n`
+               fileImportString = `'@import ../../blocks/${blockName}/${blockName}.styl'\n`
             break
          }
 

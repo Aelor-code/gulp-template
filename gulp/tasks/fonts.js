@@ -21,7 +21,7 @@ module.exports = () => {
                let fontStyle = fileArray[2] || 'normal'
 
                if ( fileNameTest !== fileName) {
-                  let str = `@include fontFace("${fontName}","${fileName}","${fontWeight}","${fontStyle}")\r\n`
+                  let str = `fontFace("${fontName}","${fileName}","${fontWeight}","${fontStyle}")\r\n`
                   fs.appendFile(path.fonts.styles.fileStyle, str, ()=>{})
                }
 

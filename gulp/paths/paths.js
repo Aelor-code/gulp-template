@@ -19,11 +19,11 @@ global.path = {
    },
    styles: {
       fileName: 'main',
-      src: `${srcFolder}/templates/styles/#main.sass`,
+      src: `${srcFolder}/templates/styles/#main.styl`,
       dest: `${destFolder}/css/`,
       watch: [
-         `${srcFolder}/blocks/**/*.sass`,
-         `${srcFolder}/templates/styles/**/*.sass`
+         `${srcFolder}/blocks/**/*.styl`,
+         `${srcFolder}/templates/styles/**/*.styl`
       ]
    },
    scripts: {
@@ -51,7 +51,7 @@ global.path = {
       dest: `${destFolder}/fonts/`,
       watch: `${srcFolder}/fonts/*.{woff,woff2}`,
       styles: {
-         fileStyle: `${srcFolder}/templates/styles/fonts.sass`,
+         fileStyle: `${srcFolder}/templates/styles/fonts.styl`,
          files: `${srcFolder}/fonts/`
       }
    },
@@ -66,9 +66,9 @@ global.path = {
       dest: `${srcFolder}/fonts/`,
       watch: `${srcFolder}/fonts/icons/*.svg`,
       runTimestamp: Math.round(Date.now() / 1000),
-      targetPath: `../templates/styles/_iconFont.sass`,
+      targetPath: `../templates/styles/_iconFont.styl`,
       fontPath: `${srcFolder}/fonts/`,
-      pathTemplate: `${srcFolder}/templates/styles/_templateIconFont.sass`,
+      pathTemplate: `${srcFolder}/templates/styles/_templateIconFont.styl`,
       fontName: "iconFont"
    }
 }
