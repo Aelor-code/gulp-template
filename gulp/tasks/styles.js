@@ -17,7 +17,7 @@ module.exports = () => {
          .pipe(groupMediaQueries())
          .pipe(sourcemaps.write())
          .pipe(rename({
-            basename: path.styles.fileName
+            basename: path.styles.fileName + '.min'
          }))
          .pipe(dest(path.styles.dest))
          .pipe(server.stream())
