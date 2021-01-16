@@ -28,7 +28,7 @@ global.path = {
    },
    styles: {
       fileName: 'main',
-      src: `${srcFolder}/templates/styles/#main.styl`,
+      src: `${srcFolder}/templates/styles/_#main.styl`,
       dest: `${destFolder}/css/`,
       watch: [
          `${srcFolder}/blocks/**/*.styl`,
