@@ -51,7 +51,7 @@ global.path = {
       dest: `${destFolder}/fonts/`,
       watch: `${srcFolder}/fonts/*.{woff,woff2}`,
       styles: {
-         fileStyle: `${srcFolder}/templates/styles/fonts.styl`,
+         fileStyle: `${srcFolder}/templates/styles/_fonts.styl`,
          files: `${srcFolder}/fonts/`
       }
    },
