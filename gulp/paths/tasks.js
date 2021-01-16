@@ -9,5 +9,6 @@ module.exports = [
    './gulp/tasks/iconfonts',
    './gulp/tasks/clean',
    './gulp/tasks/server',
-   './gulp/tasks/watch'
+   './gulp/tasks/watch',
+   './gulp/tasks/ftp'
 ]

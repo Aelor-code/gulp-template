@@ -2,6 +2,15 @@ global.srcFolder = './#src'
 global.destFolder = './build'
 
 global.path = {
+   ftp: {
+      siteName: folderName,
+      site: 'http://aelor-code.ru/view',
+      src: `${destFolder}/**/*.*`,
+      host: '',
+      user: '',
+      pass: '',
+      folder: `${destFolder}`
+   },
    pug: {
       src: `${srcFolder}/pages/*.pug`,
       dest: `${destFolder}/`,
