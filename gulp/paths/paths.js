@@ -64,7 +64,7 @@ global.path = {
       dir: `${srcFolder}/images/iconFonts/`,
       src: `${srcFolder}/images/iconFonts/*.svg`,
       dest: `${srcFolder}/fonts/`,
-      watch: `${srcFolder}/fonts/icons/*.svg`,
+      watch: `${srcFolder}/images/iconFonts/*.svg`,
       runTimestamp: Math.round(Date.now() / 1000),
       targetPath: `../templates/styles/_iconFont.styl`,
       fontPath: `${srcFolder}/fonts/`,
