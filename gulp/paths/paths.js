@@ -4,7 +4,7 @@ global.destFolder = './build'
 global.path = {
    ftp: {
       siteName: folderName,
-      site: 'http://aelor-code.ru/view',
+      site: '',
       src: `${destFolder}/**/*.*`,
       host: '',
       user: '',
