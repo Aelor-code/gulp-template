@@ -3,4 +3,5 @@ package-lock.json
 .idea
 /#src/templates/json
 /#src/fonts/iconFont.*
+/#src/templates/styles/_iconFont.*
 build/
