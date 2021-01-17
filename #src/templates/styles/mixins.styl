@@ -1,0 +1,27 @@
+// placeholder
+placeholder(val)
+   &::placeholder
+      color: val
+
+// media
+media(val)
+   @media screen and (max-width: media-query[val])
+      {block}
+
+// media-min
+media-min(val)
+   @media screen and (min-width: media-query-min[val])
+      {block}
+
+// media interval
+media-int(max = lg, min = xl)
+   @media screen and (max-width: media-query[max]) and (min-width: media-query-min[min])
+      {block}
+
+// rem
+rem(val)
+   val / font.size rem
+
+// em
+em(a,b = font.size)
+   a / b em

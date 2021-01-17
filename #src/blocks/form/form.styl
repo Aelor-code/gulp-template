@@ -1,0 +1,74 @@
+input,
+textarea
+   placeholder(#ccc)
+
+.form
+
+   &__label
+      display: block
+
+      &--check
+         display: flex
+
+         .form__label-name
+            margin-bottom: 0
+
+      &-name
+         margin-bottom: .4em
+   
+   &__select,
+   &__textarea,
+   &__input
+      min-width: 0
+      width: 100%
+      display: block
+      padding: 0 1em
+
+   &__select,
+   &__input
+      height: 40px
+
+   &__textarea
+      height: 150px
+      padding: 1em
+
+   &__check
+      display: none
+
+      &:checked
+         
+         & ~ .form__check-box
+
+            &::after
+               opacity: 1
+
+      &-box
+         position: relative
+         width: 1em
+         min-width: 1em
+         height: 1em
+         border: 1px solid #000
+
+         &:first-child
+            margin-right: .7em
+         
+         &:last-child
+            margin-right: .7em
+
+         &::after
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            width: .5em
+            height: .5em
+            background: #000
+            opacity: 0
+            transition: opacity .3s
+
+         &--circle
+            border-radius: 50%
+
+            &::after
+               border-radius: inherit

@@ -1,0 +1,18 @@
+block vars
+include blocks
+
+doctype html
+html(lang="ru-RU")
+   include head
+
+   body
+      .wrapper
+         +header()
+         main.content
+            block content
+         +footer()
+         .hidden
+            block popup
+      scripts(src="js/libs.js")
+      script(src="js/main.js")
+      block script

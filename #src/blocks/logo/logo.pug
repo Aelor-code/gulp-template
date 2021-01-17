@@ -1,0 +1,4 @@
+mixin logo(imgName)
+   - var imgName = imgName || 'logo.png'
+   a(href="index.html").logo&attributes(attributes)
+      img(src=`images/${imgName}`, alt="")

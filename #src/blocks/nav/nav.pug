@@ -1,0 +1,7 @@
+mixin nav(object)
+   - var object = object || main.nav
+   nav.nav&attributes(attributes)
+      ul
+         each obj,name in object
+            li
+               a(href= obj.href || "#")= name
