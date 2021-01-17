@@ -1,0 +1,78 @@
+include ../templates/pug/blocks
+
+doctype html
+html(lang="ru-RU")
+   head
+      meta(charset="UTF-8")
+      meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=0")
+      <!--[if IE]>
+      meta(http-equiv='X-UA-Compatible', content="IE = edge")
+      <![endif]-->
+      title Карта сайта
+   
+      link(rel="icon", href="images/favicon.ico")
+      
+      link(rel="stylesheet", href="css/libs.css")
+      link(rel="stylesheet", href="css/main.min.css")
+         
+      style.
+         html {
+            font-size: 14px;
+         }
+         body {
+            background: none;
+         }
+         .a-wrap {
+            margin: 50px auto;
+            padding: 0 15px;
+            max-width: 800px;
+         }
+         .a-box {
+            margin-bottom: 50px;
+         }
+         .a-box:last-child {
+            margin-bottom: 0;
+         }
+         .a-box__title {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 15px;
+         }
+         .a-box__list li {
+            margin-bottom: 10px;
+         }
+         .a-box__list li:last-child {
+            margin-bottom: 0;
+         }
+         .a-box__list a {
+            color: #333;
+         }
+         .a-box__list a:hover {
+            color: orange;
+         }
+         .a_disabled {
+            pointer-events: none;
+            opacity: .5;
+         }
+
+   body
+      .a-wrap
+         .a-box
+            .a-box__title Страницы
+            ul.a-box__list
+               li
+                  a(href="index.html" target="_blank") Главная
+               li
+                  a(href="#" target="_blank").a_disabled Страница
+
+         .a-box
+            .a-box__title Попапы
+            ul.a-box__list
+               li
+                  a(href="#").js-popup.a_disabled Попап
+
+      .hidden
+         //- попапы
+
+      script(src="js/libs.js")
+      script(src="js/main.js")
