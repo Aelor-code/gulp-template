@@ -4,7 +4,11 @@ global.server = require('browser-sync').create()
 module.exports = () => {
    task('serverTask', () => {
       server.init({
-         server: destFolder
+         server: {
+            baseDir:destFolder,
+            index: "_map.html"
+         },
+         notify: false
       })
    })
 }
