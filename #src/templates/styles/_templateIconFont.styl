@@ -1,15 +1,15 @@
 icon-font-name = <%= fontName %>
 
 .icon::before
-   font-family: icon-font-name
-   -webkit-font-smoothing: antialiased
-   -moz-osx-font-smoothing: grayscale
-   font-style: normal
-   font-variant: normal
-   font-weight: normal
-   text-decoration: none
-   text-transform: none
+   font-family icon-font-name
+   -webkit-font-smoothing antialiased
+   -moz-osx-font-smoothing grayscale
+   font-style normal
+   font-variant normal
+   font-weight normal
+   text-decoration none
+   text-transform none
 
 <% _.each(glyphs, function(glyph) { %>.icon-<%= glyph.fileName %>:before
-   content: '\<%= glyph.codePoint %>'
+   content '\<%= glyph.codePoint %>'
 <% }); %>
