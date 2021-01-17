@@ -2,8 +2,8 @@ const fs = require('fs')
 
 const blockName = process.argv[2] // имя блока
 const extensions = uniqueArray(
-   process.argv.slice(3).length 
-   ? process.argv.slice(3) 
+   process.argv.slice(3).length
+   ? process.argv.slice(3)
    : ['pug','json','styl','js']
    ) // расширения
 
@@ -18,7 +18,7 @@ if (blockName) {
          let fileImport = ''                                   // файл импорта
          let fileImportPath = ''                                   // файл импорта
          let fileImportString = ''                             // строка импорта файла
-         
+
          switch (extension) {
             case 'pug':
                fileContent = `mixin ${blockName}()\n   .${blockName}&attributes(attributes)`
@@ -31,7 +31,7 @@ if (blockName) {
             break
             case 'styl':
                fileContent = ``
-               fileImport = '#main.styl'
+               fileImport = '_#main.styl'
                fileImportPath = `#src/templates/styles/${fileImport}`
                fileImportString = `'@import ../../blocks/${blockName}/${blockName}.styl'\n`
             break
