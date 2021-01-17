@@ -50,7 +50,10 @@ global.path = {
       },
       scripts: {
          fileName: 'libs.js',
-         src: `${srcFolder}/plugins/**/*.js`,
+         src: [
+           `${srcFolder}/plugins/jquery/jquery.js`,
+           `${srcFolder}/plugins/**/*.js`
+         ],
          dest: `${destFolder}/js/`,
          watch: `${srcFolder}/plugins/**/*.js`
       }
