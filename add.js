@@ -33,7 +33,7 @@ if (blockName) {
                fileContent = ``
                fileImport = '_#main.styl'
                fileImportPath = `#src/templates/styles/${fileImport}`
-               fileImportString = `'@import ../../blocks/${blockName}/${blockName}.styl'\n`
+               fileImportString = `@import '../../blocks/${blockName}/${blockName}.styl'\n`
             break
          }
 
