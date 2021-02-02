@@ -22,9 +22,10 @@ global.path = {
    },
    json: {
       name: 'main.json',
-      src: `${srcFolder}/blocks/**/*.json`,
+      fileName: 'main.cson',
+      src: `${srcFolder}/blocks/**/*.cson`,
       dest: `${srcFolder}/templates/json/`,
-      watch: `${srcFolder}/blocks/**/*.json`
+      watch: `${srcFolder}/blocks/**/*.cson`
    },
    styles: {
       fileName: 'main',
