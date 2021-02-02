@@ -4,7 +4,7 @@ const blockName = process.argv[2] // имя блока
 const extensions = uniqueArray(
    process.argv.slice(3).length
    ? process.argv.slice(3)
-   : ['pug','json','styl','js']
+   : ['pug','cson','styl','js']
    ) // расширения
 
 if (blockName) {
@@ -25,9 +25,6 @@ if (blockName) {
                fileImport = 'blocks.pug'
                fileImportPath = `#src/templates/pug/${fileImport}`
                fileImportString = `include ../../blocks/${blockName}/${blockName}\n`
-            break
-            case 'json':
-               fileContent = '{}'
             break
             case 'styl':
                fileContent = ``
