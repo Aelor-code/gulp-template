@@ -22,3 +22,14 @@ exports.default = series(
       'watchTask', 'serverTask'
    )
 )
+
+// Таск для релиза проекта
+exports.build = series(
+   'typeTask', 'cleanTask', 'iconFontsTask',
+   parallel(
+      'jsonTask', 'fontsTask', 'pluginsStylesTask', 'pluginsScriptsTask'
+   ),
+   parallel(
+      'pugTask', 'stylesTask', 'scriptsTask', 'fontsStyleTask', 'imagesTask'
+   )
+)
