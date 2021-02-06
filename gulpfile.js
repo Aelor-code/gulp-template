@@ -1,4 +1,5 @@
 global.folderName = require('path').basename(__dirname)
+global.isDev = true
 const {series, parallel} = require('gulp')
 const tasks = require('./gulp//paths/tasks.js')
 
