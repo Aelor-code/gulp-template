@@ -1,24 +1,23 @@
 // Скрипт добавления и удаления блоков в проекте
 
-// Было
-// node [имя файла] [имя блока] [расширения]
+// {name} - имя блока
+// {ext}  - расширения через пробел. Например: pug cson styl js
 
-// План
-// node [имя файла] [добавить/удалить] [имя блока] [исключения] [расширения]
+// node ae add {name}          - добавить расширения по умолчанию
+// node ae add {name} {ext}    - добавить указанные расширения
+// node ae add {name} - {ext}  - добавить расширения по умолчанию за исключением
 
-// node ae add header          - добавить расширения по умолчанию
-// node ae add header pug      - добавить указанные расширения
-// node ae add header - js     - добавить расширения по умолчанию за исключением
+// node ae rm {name}           - удалить всё
+// node ae rm {name} {ext}     - удалить указанные расширения
+// node ae rm {name} - {ext}   - удалить все расширения кроме указанных
 
-// node ae rm header           - удалить всё
-// node ae rm header json      - удалить указанные расширения
-// node ae rm header - json    - удалить все расширения кроме указанных   	  (удалить папку если она остаётся пустой)
+// пустая папка удаляется
 
-const fs = require('fs')
-const readline = require('readline')
 
 const extensionsDefault = ['pug','cson','styl','js'] // расширения по умолчанию
 
+
+const fs = require('fs')
 const method = process.argv[2]// тип операции (удаление/добавление)
 const blockName = process.argv[3] // имя блока
 const isException = (process.argv[4] === '-')
@@ -26,19 +25,14 @@ const isException = (process.argv[4] === '-')
 	: false // исключение или нет
 const extensionsPosition = isException
 	? 5
-	: 4
+	: 4 // позиция начала расширений
 let extensions = uniqueArray(
 	process.argv.slice(extensionsPosition).length
 	? process.argv.slice(extensionsPosition)
 	: extensionsDefault
 ) // расширения
 
-
-importClear({
-	filePath: '#src/templates/styles/_#main.styl',
-	str: 'test'
-})
-
+// проверка наличия типа операции
 if (method !== 'add' && method !== 'rm') {
 	return console.log('Тип операции не указан')
 }
@@ -92,14 +86,29 @@ if (blockName) {
 
 						switch (fileExtention) {
 							case 'pug':
+								importClear({
+									fileName: 'blocks.pug',
+									filePath: '#src/templates/pug/blocks.pug',
+									str: `${blockName}/${blockName}`
+								})
 							break
 							case 'styl':
+								importClear({
+									fileName: '_#main.styl',
+									filePath: '#src/templates/styles/_#main.styl',
+									str: `${blockName}/${blockName}`
+								})
 							break
 						}
 					}
 				})
 
-
+				// Удаление папки
+				fs.rmdir(dirPath, err => {
+					if (!err) {
+						console.log(`${blockName} - папка удалена`)
+					}
+				})
 			})
 		})
 	}
@@ -193,12 +202,20 @@ function checkArray(el,array) {
 
 // Очистка файла от инклюда
 function importClear(obj) {
-	const rd = readline.createInterface({
-		input: fs.createReadStream(obj.filePath)
-	})
-	rd.on('line', function(line) {
-		if (line.indexOf(obj.str) !== -1) {
-			console.log('Совпадение')
+	fs.readFile(obj.filePath, 'utf8', function(err, data){
+		if (err) {
+			return console.log(err)
 		}
-	})
+
+		const arr = data.split('\n').filter(function(ln) {
+			return ln.indexOf(obj.str) === -1
+		})
+
+		fs.writeFile(obj.filePath, arr.join('\n'), function(err) {
+			if(err) {
+				return console.log(err)
+			}
+			console.log(`${obj.fileName} - импорт удалён`)
+		});
+	});
 }
