@@ -10,6 +10,8 @@
 
 ## Список задач
 
+- Pug, Styles, Imgs
+   - sourcemaps?
 - Новые таски
    - svg sprite
    - png sprite
