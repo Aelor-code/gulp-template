@@ -11,5 +11,6 @@ module.exports = () => {
       watch(path.fonts.watch, series('fontsTask', 'fontsStyleTask'))
       watch(path.images.watch, series('imagesTask'))
       watch(path.iconFonts.watch, series('iconFontsTask'))
+      watch(path.webp.watch, series('webpTask'))
    })
 }

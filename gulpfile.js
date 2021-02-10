@@ -13,7 +13,7 @@ tasks.map( task => require(task)() )
 exports.default = series(
    'cleanTask', 'iconFontsTask',
    parallel(
-      'jsonTask', 'fontsTask', 'pluginsStylesTask', 'pluginsScriptsTask'
+      'jsonTask', 'fontsTask', 'pluginsStylesTask', 'pluginsScriptsTask', 'webpTask'
    ),
    parallel(
       'pugTask', 'stylesTask', 'scriptsTask', 'fontsStyleTask', 'imagesTask'

@@ -11,5 +11,6 @@ module.exports = [
    './gulp/tasks/server',
    './gulp/tasks/watch',
    './gulp/tasks/ftp',
-   './gulp/tasks/type'
+   './gulp/tasks/type',
+   './gulp/tasks/webp'
 ]

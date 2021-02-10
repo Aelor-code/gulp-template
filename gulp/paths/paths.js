@@ -73,6 +73,11 @@ global.path = {
       dest: `${destFolder}/images/`,
       watch: `${srcFolder}/images/*.{jpg,jpeg,png,ico,gif,svg,webp}`
    },
+   webp: {
+      src: `${srcFolder}/images/*.{jpg,jpeg,png}`,
+      dest: `${srcFolder}/images/`,
+      watch: `${srcFolder}/images/*.{jpg,jpeg,png}`
+   },
    iconFonts: {
       dir: `${srcFolder}/images/iconFonts/`,
       src: `${srcFolder}/images/iconFonts/*.svg`,
