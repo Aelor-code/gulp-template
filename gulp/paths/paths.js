@@ -75,7 +75,7 @@ global.path = {
    },
    webp: {
       src: `${srcFolder}/images/*.{jpg,jpeg,png}`,
-      dest: `${srcFolder}/images/`,
+      dest: `${destFolder}/images/`,
       watch: `${srcFolder}/images/*.{jpg,jpeg,png}`
    },
    iconFonts: {
