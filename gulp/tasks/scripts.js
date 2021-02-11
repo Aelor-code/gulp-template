@@ -10,7 +10,7 @@ module.exports = () => {
          .pipe(concat(path.scripts.fileName))
          .pipe(gulpif(!isDev, dest(path.scripts.dest)))
          .pipe(rename({
-            basename: path.scripts.fileName + '.min'
+            suffix: '.min'
          }))
          .pipe(gulpif(!isDev, uglify()))
          .pipe(dest(path.scripts.dest))
