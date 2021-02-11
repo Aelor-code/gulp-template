@@ -1,0 +1,4 @@
+mixin webp(imgName,format)
+   picture&attributes(attributes)
+      source(srcset=`images/${imgName}.webp`, type="image/webp")
+      img(src=`images/${imgName}.${format}`, alt="")
