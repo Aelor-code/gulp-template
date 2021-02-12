@@ -11,7 +11,7 @@ tasks.map( task => require(task)() )
 
 // Таск по умолчанию
 exports.default = series(
-   'cleanTask', 'iconFontsTask',
+   'cleanTask', 'iconFontsTask', 'ttfConvertTask', 'clearFontsTask',
    parallel(
       'jsonTask', 'fontsTask', 'pluginsStylesTask', 'pluginsScriptsTask'
    ),
@@ -25,7 +25,7 @@ exports.default = series(
 
 // Таск для релиза проекта
 exports.build = series(
-   'typeTask', 'cleanTask', 'iconFontsTask',
+   'typeTask', 'cleanTask', 'iconFontsTask', 'ttfConvertTask', 'clearFontsTask',
    parallel(
       'jsonTask', 'fontsTask', 'pluginsStylesTask', 'pluginsScriptsTask'
    ),

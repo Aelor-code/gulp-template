@@ -12,5 +12,6 @@ module.exports = () => {
       watch(path.images.watch, series('imagesTask'))
       watch(path.iconFonts.watch, series('iconFontsTask'))
       watch(path.webp.watch, series('webpTask'))
+      watch(path.fonts.ttf.watch, series('ttfConvertTask', 'clearFontsTask'))
    })
 }

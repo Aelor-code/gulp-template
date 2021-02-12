@@ -66,6 +66,11 @@ global.path = {
       styles: {
          fileStyle: `${srcFolder}/templates/styles/_fonts.styl`,
          files: `${srcFolder}/fonts/`
+      },
+      ttf: {
+         src: `${srcFolder}/fonts/*.ttf`,
+         dest: `${srcFolder}/fonts/`,
+         watch: `${srcFolder}/fonts/*.ttf`
       }
    },
    images: {

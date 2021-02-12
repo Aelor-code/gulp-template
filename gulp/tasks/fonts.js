@@ -1,11 +1,28 @@
 const {src, dest, task} = require('gulp')
 const fs = require('fs')
+const ttf2woff2 = require('gulp-ttf2woff2')
+const changed = require('gulp-changed')
+const clean = require('del')
 
 module.exports = () => {
    task('fontsTask', () => {
       return src(path.fonts.src)
+         .pipe(changed(path.fonts.dest))
          .pipe(dest(path.fonts.dest))
          .pipe(server.stream())
+   })
+
+   task('ttfConvertTask', () => {
+      return src(path.fonts.ttf.src)
+         .pipe(changed(path.fonts.dest), {extension: '.woff2'})
+         .pipe(ttf2woff2())
+         .pipe(dest(path.fonts.ttf.dest))
+   })
+
+   task('clearFontsTask', () => {
+      return clean([
+         path.fonts.ttf.src
+      ])
    })
 
    task('fontsStyleTask', (cb) => {
